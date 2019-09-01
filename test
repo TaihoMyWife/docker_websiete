@@ -1,0 +1,35 @@
+@app.route('/sketch/upload', methods=['POST', 'GET'])
+def upload():
+    if request.method == 'POST':
+        f = request.files['files[]']
+
+        print(f)
+        filename = f.filename  # 获取接收到的文件名
+        print(filename)
+        minetype = f.content_type  # 文件类型
+        print(minetype)
+
+        now_time = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')  # 获取本地时间，进行图片重命名
+        dir = 'C:/Users/19371/Desktop/docker/static/temp-img/rough/' + now_time
+        # ‘static/temp-img/rough/’是我们预设置的路径，用来暂时存储原图片，于是我们构造了图片的存储路径和名字
+
+        os.makedirs(dir)
+        filepath = dir + "/" + now_time + "." + filename.split(".")[1]  # 但别忘记我们还需要获得图片格式（扩展名，可能是.jpg，.png等）
+
+        f.save(filepath)  # 将文件存储下来
+
+        filepath_ = dir + "/" + now_time + "." + filename.split(".")[1]
+        # ‘static/temp-img/simplified/’也是我们预设置的路径，用来暂时存储结果图片
+
+        # 最后我们就可以返回对应的路径啦
+        return simplejson.dumps({
+            "files":
+                [{
+                    "name": filename,
+                    "mintype": minetype,
+                    "filepath": filepath,
+                    "filepath_": filepath_
+                }]
+        })
+    else:
+        return render_template('demo.html')

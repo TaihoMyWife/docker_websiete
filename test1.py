@@ -1,4 +1,4 @@
 import os
  
-file = open('new_file' + '.txt','w')
+file = open('new4_file' + '.txt','w')
 file.close()

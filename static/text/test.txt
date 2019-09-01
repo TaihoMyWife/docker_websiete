@@ -1,0 +1,176 @@
+
+certificate: /C=CN/ST=Shaanxi/L=Xian/O=NeoCom/OU=NeoComClient/CN=ClientC/emailAddress=clientC@chenu.com
+Country Name: C=CN
+State or Province Name: ST=Shaanxi
+Locality Name: L=Xian
+Organization Name: O=NeoCom
+Organizational Unit Name: OU=NeoComClient
+Common Name: CN=ClientC
+Email Address: emailAddress=clientC@chenu.com
+User level: 3
+original Cipher Suite: ECDHE-RSA-AES256-GCM-SHA384
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES256
+encryption mode: GCM
+MAC/PRF: SHA384
+present Cipher Suite: ECDHE-RSA-AES128-GCM-SHA256
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES128
+encryption mode: GCM
+MAC/PRF: SHA256
+
+certificate: /C=CN/ST=Shaanxi/L=Xian/O=NeoCom/OU=NeoComClient/CN=ClientC/emailAddress=clientC@chenu.com
+Country Name: C=CN
+State or Province Name: ST=Shaanxi
+Locality Name: L=Xian
+Organization Name: O=NeoCom
+Organizational Unit Name: OU=NeoComClient
+Common Name: CN=ClientC
+Email Address: emailAddress=clientC@chenu.com
+User level: 3
+original Cipher Suite: ECDHE-RSA-AES256-GCM-SHA384
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES256
+encryption mode: GCM
+MAC/PRF: SHA384
+present Cipher Suite: ECDHE-RSA-AES128-GCM-SHA256
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES128
+encryption mode: GCM
+MAC/PRF: SHA256
+
+certificate: /C=CN/ST=Shaanxi/L=Xian/O=NeoCom/OU=NeoComClient/CN=ClientC/emailAddress=clientC@chenu.com
+Country Name: C=CN
+State or Province Name: ST=Shaanxi
+Locality Name: L=Xian
+Organization Name: O=NeoCom
+Organizational Unit Name: OU=NeoComClient
+Common Name: CN=ClientC
+Email Address: emailAddress=clientC@chenu.com
+User level: 3
+original Cipher Suite: ECDHE-RSA-AES256-GCM-SHA384
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES256
+encryption mode: GCM
+MAC/PRF: SHA384
+present Cipher Suite: ECDHE-RSA-AES128-GCM-SHA256
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES128
+encryption mode: GCM
+MAC/PRF: SHA256
+
+certificate: /C=CN/ST=Shaanxi/L=Xian/O=NeoCom/OU=NeoComClient/CN=ClientC/emailAddress=clientC@chenu.com
+Country Name: C=CN
+State or Province Name: ST=Shaanxi
+Locality Name: L=Xian
+Organization Name: O=NeoCom
+Organizational Unit Name: OU=NeoComClient
+Common Name: CN=ClientC
+Email Address: emailAddress=clientC@chenu.com
+User level: 3
+original Cipher Suite: ECDHE-RSA-AES256-GCM-SHA384
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES256
+encryption mode: GCM
+MAC/PRF: SHA384
+present Cipher Suite: ECDHE-RSA-AES128-GCM-SHA256
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES128
+encryption mode: GCM
+MAC/PRF: SHA256
+
+certificate: /C=CN/ST=Shaanxi/L=Xian/O=NeoCom/OU=NeoComClient/CN=ClientC/emailAddress=clientC@chenu.com
+Country Name: C=CN
+State or Province Name: ST=Shaanxi
+Locality Name: L=Xian
+Organization Name: O=NeoCom
+Organizational Unit Name: OU=NeoComClient
+Common Name: CN=ClientC
+Email Address: emailAddress=clientC@chenu.com
+User level: 3
+original Cipher Suite: ECDHE-RSA-AES256-GCM-SHA384
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES256
+encryption mode: GCM
+MAC/PRF: SHA384
+present Cipher Suite: ECDHE-RSA-AES128-GCM-SHA256
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES128
+encryption mode: GCM
+MAC/PRF: SHA256
+
+certificate: /C=CN/ST=Shaanxi/L=Xian/O=NeoCom/OU=NeoComClient/CN=ClientC/emailAddress=clientC@chenu.com
+Country Name: C=CN
+State or Province Name: ST=Shaanxi
+Locality Name: L=Xian
+Organization Name: O=NeoCom
+Organizational Unit Name: OU=NeoComClient
+Common Name: CN=ClientC
+Email Address: emailAddress=clientC@chenu.com
+User level: 3
+original Cipher Suite: ECDHE-RSA-AES256-GCM-SHA384
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES256
+encryption mode: GCM
+MAC/PRF: SHA384
+present Cipher Suite: ECDHE-RSA-AES128-GCM-SHA256
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES128
+encryption mode: GCM
+MAC/PRF: SHA256
+
+certificate: /C=CN/ST=Shaanxi/L=Xian/O=NeoCom/OU=NeoComClient/CN=ClientC/emailAddress=clientC@chenu.com
+Country Name: C=CN
+State or Province Name: ST=Shaanxi
+Locality Name: L=Xian
+Organization Name: O=NeoCom
+Organizational Unit Name: OU=NeoComClient
+Common Name: CN=ClientC
+Email Address: emailAddress=clientC@chenu.com
+User level: 3
+original Cipher Suite: ECDHE-RSA-AES256-GCM-SHA384
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES256
+encryption mode: GCM
+MAC/PRF: SHA384
+present Cipher Suite: ECDHE-RSA-AES128-GCM-SHA256
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES128
+encryption mode: GCM
+MAC/PRF: SHA256
+
+certificate: /C=CN/ST=Shaanxi/L=Xian/O=NeoCom/OU=NeoComClient/CN=ClientC/emailAddress=clientC@chenu.com
+Country Name: C=CN
+State or Province Name: ST=Shaanxi
+Locality Name: L=Xian
+Organization Name: O=NeoCom
+Organizational Unit Name: OU=NeoComClient
+Common Name: CN=ClientC
+Email Address: emailAddress=clientC@chenu.com
+User level: 3
+original Cipher Suite: ECDHE-RSA-AES256-GCM-SHA384
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES256
+encryption mode: GCM
+MAC/PRF: SHA384
+present Cipher Suite: ECDHE-RSA-AES128-GCM-SHA256
+Key exchange method: ECDHE
+Authentication method: RSA
+encryption algorithm and its strength: AES128
+encryption mode: GCM
+MAC/PRF: SHA256

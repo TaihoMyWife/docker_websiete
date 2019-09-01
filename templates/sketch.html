@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}"/>
+    <script src="{{ url_for('static', filename='js/main.js') }}" type="text/javascript"></script>
+    <h2>Demo</h2>
+    <dd></dd>
+    <dd>
+        Click <a href="{{ url_for('gotoDemo') }}" style="border: #FF8104 solid 1px; border-radius: 15px; color: #FF8014; text-decoration: none; padding-left: 15px; padding-right: 15px;">here</a> to have a join!
+     </dd>
+</head>
+<body>
+    <div>
+	<center>
+	    <div class="main_div" id="main_div">
+		<ul class="ul_img">
+		    <li class="li_img"><img src="{{ url_for('static', filename='images/sketch/01.jpg') }}"/></li>
+		    <li class="li_img"><img src="{{ url_for('static', filename='images/sketch/02.jpg') }}"/></li>
+		    <li class="li_img"><img src="{{ url_for('static', filename='images/sketch/03.jpg') }}"/></li>
+		    <li class="li_img"><img src="{{ url_for('static', filename='images/sketch/04.jpg') }}"/></li>
+		    <li class="li_img"><img src="{{ url_for('static', filename='images/sketch/05.jpg') }}"/></li>
+		    <li class="li_img"><img src="{{ url_for('static', filename='images/sketch/06.jpg') }}"/></li>
+		    <li class="li_img"><img src="{{ url_for('static', filename='images/sketch/07.jpg') }}"/></li>
+		</ul>
+ 
+		</div>
+		<div>
+		    <img class="btn_img div_btn" src="{{ url_for('static', filename='images/sketch/index/01.jpg') }}"/>
+		    <img class="btn_img div_btn" src="{{ url_for('static', filename='images/sketch/index/02.jpg') }}"/>
+		    <img class="btn_img div_btn" src="{{ url_for('static', filename='images/sketch/index/03.jpg') }}"/>
+		    <img class="btn_img div_btn" src="{{ url_for('static', filename='images/sketch/index/04.jpg') }}"/>
+		    <img class="btn_img div_btn" src="{{ url_for('static', filename='images/sketch/index/05.jpg') }}"/>
+		    <img class="btn_img div_btn" src="{{ url_for('static', filename='images/sketch/index/06.jpg') }}"/>
+		    <img class="btn_img div_btn" src="{{ url_for('static', filename='images/sketch/index/07.jpg') }}"/>
+		</div>
+	</center>
+    </div>
+</body>
