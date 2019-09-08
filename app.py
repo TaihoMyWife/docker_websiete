@@ -11,7 +11,7 @@ import pymysql
 import filedata
 import sys
 from shutil import copyfile #copy
-from PIL import Image
+#from PIL import Image
 from flask import Flask, render_template, jsonify, request, redirect, url_for,flash,current_app
 '''
 from cpuidle import timess,values
