@@ -77,10 +77,17 @@ def jiedian():
             return render_template('./jiedian.html')
     else:
         cursor.execute("select * from user1 where iden='"+nameuser+"'and password='"+password+"' and index1='1'")             ####
-        result=cursor.fetchall()
-        print(result)
-        #该用户不存在
-        res="1"
+        result1=cursor.fetchall()
+        print(result1)
+        cursor.execute("select * from user1 where iden='"+nameuser+"'and password='"+password+"' and index1='1'")             ####
+        result2=cursor.fetchall()
+        print(result2)
+        result=result1
+        if not result1 and not result2:
+            result = result1
+        elif result2:
+            result=result2
+
         if not result:
             return render_template('./login.html', res= '用户名密码不正确')
         else:
