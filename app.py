@@ -149,6 +149,21 @@ def shili2():
 def hello():
     return render_template('sketch.html')
 
+@app.route('/osd-manage')
+def osd-manage():
+    return render_template('./osd.html')
+
+@app.route('/fdisk-manage')
+def fdisk-manage():
+    return render_template('./fdisk.html')
+
+@app.route('/rdb-manage')
+def rdb-manage():
+    return render_template('./rdb.html')
+@app.route('/amp-manage')
+def map-manage():
+    return render_template('./map.html')
+
 @app.route('/sketch/monitor', methods=['POST', 'GET']) #show docker
 def monitor():
     a=os.popen(commandsA)
