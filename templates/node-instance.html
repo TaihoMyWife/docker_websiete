@@ -305,7 +305,7 @@
     </nav>
   </header>
   <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
+    <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
@@ -314,8 +314,8 @@
 
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu" data-widget="tree">
-        <li class="treeview">
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="treeview active">
           <a href="#">
             <i class="fa fa-table"></i><span>节点管理</span>
             <span class="pull-right-container">
@@ -324,7 +324,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="/jiedian?username=1@1.com&password=1"><i class="fa fa-circle-o"></i>节点基本信息展示</a></li>
-            <li><a href="/shili"><i class="fa fa-circle-o"></i>个人节点管理</a></li>
+            <li class="active"><a href="/shili"><i class="fa fa-circle-o"></i>个人节点管理</a></li>
           </ul>
         </li>		
 		
@@ -335,28 +335,13 @@
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
-         
-           <!-- <li class="active"><a href="/jiedian?username=1@1.com&password=1"><i class="fa fa-circle-o"></i>选择节点</a></li>-->
-		    <ul class="treeview-menu">
-            <li class="treeview">
-              <a href="#">
-                <i class="fa fa-pie-chart"></i>
-                <span>选择节点</span>
-                <span class="pull-right-container">
-                   <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="/chartjs"><i class="fa fa-circle-o"></i> 202.117.10.235</a></li>
-                <li><a href="/chartjs"><i class="fa fa-circle-o"></i> 202.117.10.37</a></li>
-                <li><a href="/morris"><i class="fa fa-circle-o"></i> 202.117.10.168</a></li>
-              </ul>
-            </li>
-            
+          <ul class="treeview-menu">
+            <li><a href="/jiedian?username=1@1.com&password=1"><i class="fa fa-circle-o"></i> 节点</a></li>
+            <li><a href="/shili"><i class="fa fa-circle-o"></i> 实例</a></li>
           </ul>
         </li>
 
-        <li class="treeview active">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-table"></i> <span>文件管理</span>
             <span class="pull-right-container">
@@ -364,7 +349,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li  class="active"><a href="/user-manage"><i class="fa fa-circle-o"></i>202.117.10.235</a></li>
+            <li><a href="/user-manage"><i class="fa fa-circle-o"></i>202.117.10.235</a></li>
           </ul>
           <ul class="treeview-menu">
             <li><a href="/cert_managment"><i class="fa fa-circle-o"></i>202.117.10.37</a></li>
@@ -386,32 +371,48 @@
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-pie-chart"></i>
-                <span>监测结果展示</span>
+                <span>001</span>
                 <span class="pull-right-container">
                    <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/chartjs"><i class="fa fa-circle-o"></i> 202.117.10.235</a></li>
-                <li><a href="/chartjs"><i class="fa fa-circle-o"></i> 202.117.10.37</a></li>
-                <li><a href="/morris"><i class="fa fa-circle-o"></i> 202.117.10.168</a></li>
+                <li><a href="/chartjs"><i class="fa fa-circle-o"></i> CPU</a></li>
+                <li><a href="/chartjs"><i class="fa fa-circle-o"></i> 磁盘</a></li>
+                <li><a href="/morris"><i class="fa fa-circle-o"></i> IO</a></li>
+                <li><a href="/morris"><i class="fa fa-circle-o"></i> 内存</a></li>
               </ul>
             </li>
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-pie-chart"></i>
-                <span>故障预测</span>
+                <span>002</span>
                 <span class="pull-right-container">
                    <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="/chartjs"><i class="fa fa-circle-o"></i> 202.117.10.235</a></li>
-                <li><a href="/chartjs"><i class="fa fa-circle-o"></i> 202.117.10.37</a></li>
-                <li><a href="/morris"><i class="fa fa-circle-o"></i> 202.117.10.168</a></li>
+                <li><a href="/data"><i class="fa fa-circle-o"></i> CPU</a></li>
+                <li><a href="/chartjs"><i class="fa fa-circle-o"></i> 磁盘</a></li>
+                <li><a href="/morris"><i class="fa fa-circle-o"></i> IO</a></li>
+                <li><a href="/morris"><i class="fa fa-circle-o"></i> 内存</a></li>
               </ul>
             </li>
-            
+            <li class="treeview">
+              <a href="#">
+                <i class="fa fa-pie-chart"></i>
+                <span>003</span>
+                <span class="pull-right-container">
+                   <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="/data"><i class="fa fa-circle-o"></i> CPU</a></li>
+                <li><a href="/chartjs"><i class="fa fa-circle-o"></i> 磁盘</a></li>
+                <li><a href="/morris"><i class="fa fa-circle-o"></i> IO</a></li>
+                <li><a href="/morris"><i class="fa fa-circle-o"></i> 内存</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
 
@@ -446,15 +447,16 @@
     <!-- /.sidebar -->
   </aside>
 
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
 
 
     <!-- Main content -->
-      <div class="box box-info">
+    <div class="l_left news_right">
             <div class="box-header with-border">
-              <h3 class="box-title">节点IP:202.117.10.235</h3>
+              <h3 class="box-title">节点实例信息展示</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -462,66 +464,141 @@
                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
               </div>
             </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-			<!--
-                <input id="filename" class="form-control" placeholder="文件名" name = 'password'>
-                <button id="searchfile" type="button" class="btn btn-default">查找</button> -->
-				<div class="notice_check">
-                <div class="btn-group l_left" style="margin-right: 4px">
-                    
-                    
-                </div>
-                <div class="l_left">
-				                        
-                    <input class="find_input" type="text" style="width:500px;height:30px;" ><button class="btn btn-default change" style="height: 35px;line-height: 30px;padding: 0 12px !important;font-size: 12px" type="button">选择文件类型</button><button id="searchfile" type="button" class="btn btn-default">查找</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-default" onclick="addUser()" value="显示一个提示框"><span class="glyphicon glyphicon-pencil"></span>新增</a><a class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span>删除</a><a class="btn btn-default" onclick="addUser()"><span class="glyphicon glyphicon-pencil"></span>编辑</a><a class="btn btn-default" onclick="reset_password()"><span class="glyphicon glyphicon-pencil"></span>重置</a>
 
-                </div>
-                
-                <div class="notice_nav r_right">
-                   
-                </div>
-                <div class="clear"></div>
-            </div>
-              <div class="table-responsive">
+            
+            <body style="background-color: #ecf0f5;font-family: 微软雅黑;color: #475059;min-width: 1000px;overflow: auto" onload="tableLoad()">
+           <div class="notice_main">
+          <div style="border-bottom: 1px #ccc solid;padding-bottom: 8px">
+        <p style="line-height: 24px;font-size: 14px;padding: 4px 0 0 36px ;color:#bb8940;background-image: url(img/ts_03.png);background-repeat: no-repeat;background-position: 10px 8px;font-weight: bold">温馨提示</p>
+        <ul class="ts">
+            <li><span>*</span>该页面主要显示的是对节点实例数据管理的信息，并提供导出，打印等操作</li>
 
-                  <table class="table no-margin" id="fileTree">
-                  <thead>
+        </ul>
+    </div>
+
+    <div class="notice_check">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label>节点IP：</label> <input class="find_input" type="text">
+        <label>实例ID：</label> <input class="find_input" type="text">
+        <label>实例名称：</label> <input class="find_input" type="text">
+
+        <button class="btn btn-default" id="searchfile" style="background-color:#008CBA;color:white;height:28px;text-align: top;" type="button">查找</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="btn btn-default">导出</a>
+        <a class="btn btn-default">打印</a>
+
+
+
+
+
+</div>
+    <div class="bootstrap-table"><div class="fixed-table-toolbar"></div><div class="fixed-table-container" style="padding-bottom: 0px;">
+	<div class="fixed-table-header" style="display: none;"><table></table></div><div class="fixed-table-body"><div class="fixed-table-loading" style="top: 42px; display: none;">正在努力地加载数据中，请稍候……</div><table class="table_style table table-hover table-striped" id="table" style="margin: 0 auto"> <thead><tr><th tabindex="0" class="bs-checkbox " style="text-align: center; vertical-align: middle; width: 36px; " data-field="check"><div class="fht-cell"></div></th>
+	<th tabindex="0" style="text-align: center; vertical-align: middle; " data-field="id"><div class="th-inner ">节点IP</div>
+	<div class="fht-cell"></div></th><th tabindex="0" style="text-align: center; vertical-align: middle; " data-field="name"><div class="th-inner ">实例ID</div>
+	<div class="fht-cell"></div></th><th tabindex="0" style="text-align: center; vertical-align: middle; " data-field="type"><div class="th-inner ">实例名称</div>
+	<div class="fht-cell"></div></th><th tabindex="0" style="text-align: center; vertical-align: middle; " data-field="local"><div class="th-inner ">状态</div>
+	<div class="fht-cell"></div></th><th tabindex="0" style="text-align: center; vertical-align: middle; " data-field="time"><div class="th-inner ">创建时间</div>
+	<div class="fht-cell"></div></th></tr></thead><tbody><tr data-index="0"><td class="bs-checkbox "><input name="btSelectItem" type="checkbox" data-index="0"></td>
+	<td style="text-align: center; vertical-align: middle; "><u>202.117.10.168</u></td><td style="text-align: center; vertical-align: middle; ">a459f11da6bd</td>
+	<td style="text-align: center; vertical-align: middle; ">sleepy_villani</td><td style="text-align: center; vertical-align: middle; "><span class="badge p-2 badge-success mb-1" style="background-color:green ;">Created</span></td>
+	<td style="text-align: center; vertical-align: middle; ">16 minutes ago</td>
+	<tr data-index="1"><td class="bs-checkbox "><input name="btSelectItem" type="checkbox" data-index="1"></td>
+	<td style="text-align: center; vertical-align: middle; "><u>202.117.10.235</u></td><td style="text-align: center; vertical-align: middle; ">4a5797c96195</td>
+	<td style="text-align: center; vertical-align: middle; ">elastic_torvalds</td><td style="text-align: center; vertical-align: middle; "><span class="badge p-2 badge-success mb-1" style="background-color:red ;">Exited (0) 17 minutes ago</span></td>
+	<td style="text-align: center; vertical-align: middle; ">17 minutes ago</td>
+	<tr data-index="2"><td class="bs-checkbox "><input name="btSelectItem" type="checkbox" data-index="2"></td>
+	<td style="text-align: center; vertical-align: middle; "><u>202.117.10.37</u></td><td style="text-align: center; vertical-align: middle; ">a39a1c8073e4</td>
+	<td style="text-align: center; vertical-align: middle; ">epic_williams</td><td style="text-align: center; vertical-align: middle; "><span class="badge p-2 badge-success mb-1" style="background-color:orange ;">Up 42 minutes</span></td>
+	<td style="text-align: center; vertical-align: middle; ">3 weeks ago</td>
+	<tr data-index="3"><td class="bs-checkbox "><input name="btSelectItem" type="checkbox" data-index="3"></td>
+	<td style="text-align: center; vertical-align: middle; "><u>202.117.10.235</u></td><td style="text-align: center; vertical-align: middle; ">3ff928f25f1d</td>
+	<td style="text-align: center; vertical-align: middle; ">fervent_tesla</td><td style="text-align: center; vertical-align: middle;"><span class="badge p-2 badge-success mb-1" style="background-color:green ;">Created</span></td>
+	<td style="text-align: center; vertical-align: middle; ">3 weeks ago</td>
+	<tr data-index="4"><td class="bs-checkbox "><input name="btSelectItem" type="checkbox" data-index="4"></td>
+	<td style="text-align: center; vertical-align: middle; "><u>202.117.10.235</u></td><td style="text-align: center; vertical-align: middle; ">ec13939a5d93 </td>
+	<td style="text-align: center; vertical-align: middle; ">suspicious_mayer</td><td style="text-align: center; vertical-align: middle; "><span class="badge p-2 badge-success mb-1" style="background-color:red ;">Exited (0) 3 weeks ago</span></td>
+	<td style="text-align: center; vertical-align: middle; ">3 weeks ago</td>
+</div>
+<script src="js/jquery/jQuery-2.2.0.min.js"></script>
+<script src="js/bstable/js/bootstrap.min.js"></script>
+<script src="js/bstable/js/bootstrap-table.js"></script>
+<script src="js/bstable/js/bootstrap-table-zh-CN.min.js"></script>
+<script src="js/layer_v2.1/layer/layer.js"></script>
+<script src="js/hosytLight.js"></script>
+
+
+
+
+</body>
+        </div>
+           
+             
+<!--
                   <tr>
-                    <th>文件类型</th>
-                    <th>文件名</th>
-                    <th>文件大小</th>
-                    <th>是否有权限</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-				  
-
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">11111</a></td>
-                    <td>Call of Duty IV</td>
-                    <td><span class="label label-success">Shipped</span></td>
+                    <td><input type="checkbox" value=""></td>
+                    <td><a href="/info">001</a></td>
+                    <td>1@1.com</td>
+                    <td>管理员</td>
+                    <td>001,002,003</td>
+                    <td>001,002,003</td>
                     <td>
                       <div class="sparkbar" data-color="#00a65a" data-height="20"><canvas width="34" height="20" style="display: inline-block; width: 34px; height: 20px; vertical-align: top;"></canvas></div>
                     </td>
-                  </tr>
 
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" value=""></td>
+                    <td><a href="/info">002</a></td>
+                    <td>2@2.com</td>
+                    <td>普通用户1</td>
+                    <td>001</td>
+
+                    <td>
+                      <div class="sparkbar" data-color="#00a65a" data-height="20"><canvas width="34" height="20" style="display: inline-block; width: 34px; height: 20px; vertical-align: top;"></canvas></div>
+                    </td>
+                    <td><div class="tools">
+                        <a ><button id="dockerdel" type="button" class="btn btn-default">删除</button></a>
+                    </div></td>
+                  </tr>
+                  <tr>
+                    <td><input type="checkbox" value=""></td>
+                    <td><a href="/info">003</a></td>
+                    <td>3@3.com</td>
+                    <td>普通用户2</td>
+                    <td>002,003</td>
+
+                    <td>
+                      <div class="sparkbar" data-color="#00a65a" data-height="20"><canvas width="34" height="20" style="display: inline-block; width: 34px; height: 20px; vertical-align: top;"></canvas></div>
+                    </td>
+                    <td><div class="tools">
+                        <a ><button id="dockerdel" type="button" class="btn btn-default">删除</button></a>
+                    </div></td>
+                  </tr>
+                  -->
                   </tbody>
                 </table>
               </div>
               <!-- /.table-responsive -->
             </div>
+
+
             <!-- /.box-body -->
-            <div class="box-footer clearfix">
-              <a id="parent" class="btn btn-sm btn-info btn-flat pull-left">返回上一层</a>
-              <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
-            </div>
+
             <!-- /.box-footer -->
           </div>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.4.0
+    </div>
+    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    reserved.
+  </footer>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -757,11 +834,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="static/dist/js/demo.js"></script>
 
-<script type="text/javascript" src="{{ url_for('static', filename='js/filetree.js') }}"></script>
-<script type="text/javascript">
-function addUser(){    
-var name=prompt("输入的内容","");    if (name!=null && name!="") {        alert("你输入的是" + name);            }}</script>
-
+<script type="text/javascript" src="{{ url_for('static', filename='js/userlist.js') }}"></script>
 </body>
 </html>
 

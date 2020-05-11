@@ -52,7 +52,7 @@
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
-            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -305,7 +305,7 @@
     </nav>
   </header>
   <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
+    <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
@@ -314,7 +314,7 @@
 
       <!-- /.search form -->
       <!-- sidebar menu: : style can be found in sidebar.less -->
-        <ul class="sidebar-menu" data-widget="tree">
+      <ul class="sidebar-menu" data-widget="tree">
         <li class="treeview">
           <a href="#">
             <i class="fa fa-table"></i><span>节点管理</span>
@@ -356,7 +356,7 @@
           </ul>
         </li>
 
-        <li class="treeview active">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-table"></i> <span>文件管理</span>
             <span class="pull-right-container">
@@ -364,7 +364,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li  class="active"><a href="/user-manage"><i class="fa fa-circle-o"></i>202.117.10.235</a></li>
+            <li><a href="/user-manage"><i class="fa fa-circle-o"></i>202.117.10.235</a></li>
           </ul>
           <ul class="treeview-menu">
             <li><a href="/cert_managment"><i class="fa fa-circle-o"></i>202.117.10.37</a></li>
@@ -374,7 +374,7 @@
           </ul>
         </li>
 
-        <li class="treeview">
+        <li class="treeview active">
           <a href="#">
             <i class="fa fa-table"></i>
             <span>监测管理</span>
@@ -397,7 +397,7 @@
                 <li><a href="/morris"><i class="fa fa-circle-o"></i> 202.117.10.168</a></li>
               </ul>
             </li>
-            <li class="treeview">
+            <li class="treeview active">
               <a href="#">
                 <i class="fa fa-pie-chart"></i>
                 <span>故障预测</span>
@@ -407,7 +407,7 @@
               </a>
               <ul class="treeview-menu">
                 <li><a href="/chartjs"><i class="fa fa-circle-o"></i> 202.117.10.235</a></li>
-                <li><a href="/chartjs"><i class="fa fa-circle-o"></i> 202.117.10.37</a></li>
+                <li class="active"><a href="/chartjs"><i class="fa fa-circle-o"></i> 202.117.10.37</a></li>
                 <li><a href="/morris"><i class="fa fa-circle-o"></i> 202.117.10.168</a></li>
               </ul>
             </li>
@@ -446,89 +446,177 @@
     <!-- /.sidebar -->
   </aside>
 
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>节点IP：<u style="color:blue;">202.117.10.37</u></h1>
+      
+    </section>
+	<div class="notice_check">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a class="btn btn-default" style="background-color:#008CBA;color:white;">预测步长/min</a>
+		<input class="find_input" type="text" style="height:30px">
 
+        <a class="btn btn-default" style="background-color:#008CBA;color:white;">确认</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<a class="btn btn-default" style="background-color:#008CBA;color:white;" onclick="addUser()" value="显示一个提示框">0.5小时数据预测</a>
+		<a class="btn btn-default" style="background-color:#008CBA;color:white;">1小时数据预测</a>
+		<a class="btn btn-default" onclick="reset_password()" style="background-color:#008CBA;color:white;">24小时数据预测</a>
+    </div>
 
     <!-- Main content -->
-      <div class="box box-info">
+    <section class="content">
+      
+      <div class="row">
+        <div class="col-lg-6">
+          <!-- CPU CHART -->
+		  <div class="box box-info">
             <div class="box-header with-border">
-              <h3 class="box-title">节点IP:202.117.10.235</h3>
-
+              <h3 class="box-title">CPU利用率（%）</h3>
+              <ul class="list-inline text-right">
+			  <li><h5><i class="fa fa-circle m-r-5 text-inverse" style="color:#f56954;"></i>实际值</h5></li>
+			  <li><h5><i class="fa fa-circle m-r-5 text-info"style="color:#008CBA;"></i>预测值</h5></li>
+			  </ul>
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                 </button>
                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
               </div>
             </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-			<!--
-                <input id="filename" class="form-control" placeholder="文件名" name = 'password'>
-                <button id="searchfile" type="button" class="btn btn-default">查找</button> -->
-				<div class="notice_check">
-                <div class="btn-group l_left" style="margin-right: 4px">
-                    
-                    
-                </div>
-                <div class="l_left">
-				                        
-                    <input class="find_input" type="text" style="width:500px;height:30px;" ><button class="btn btn-default change" style="height: 35px;line-height: 30px;padding: 0 12px !important;font-size: 12px" type="button">选择文件类型</button><button id="searchfile" type="button" class="btn btn-default">查找</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="btn btn-default" onclick="addUser()" value="显示一个提示框"><span class="glyphicon glyphicon-pencil"></span>新增</a><a class="btn btn-default"><span class="glyphicon glyphicon-pencil"></span>删除</a><a class="btn btn-default" onclick="addUser()"><span class="glyphicon glyphicon-pencil"></span>编辑</a><a class="btn btn-default" onclick="reset_password()"><span class="glyphicon glyphicon-pencil"></span>重置</a>
-
-                </div>
-                
-                <div class="notice_nav r_right">
-                   
-                </div>
-                <div class="clear"></div>
-            </div>
-              <div class="table-responsive">
-
-                  <table class="table no-margin" id="fileTree">
-                  <thead>
-                  <tr>
-                    <th>文件类型</th>
-                    <th>文件名</th>
-                    <th>文件大小</th>
-                    <th>是否有权限</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-				  
-
-                  <tr>
-                    <td><a href="pages/examples/invoice.html">11111</a></td>
-                    <td>Call of Duty IV</td>
-                    <td><span class="label label-success">Shipped</span></td>
-                    <td>
-                      <div class="sparkbar" data-color="#00a65a" data-height="20"><canvas width="34" height="20" style="display: inline-block; width: 34px; height: 20px; vertical-align: top;"></canvas></div>
-                    </td>
-                  </tr>
-
-                  </tbody>
-                </table>
-              </div>
-              <!-- /.table-responsive -->
+            <div class="box-body chart-responsive">
+              <div class="chart" id="line-chart" style="height: 300px;"></div>
             </div>
             <!-- /.box-body -->
-            <div class="box-footer clearfix">
-              <a id="parent" class="btn btn-sm btn-info btn-flat pull-left">返回上一层</a>
-              <a href="javascript:void(0)" class="btn btn-sm btn-default btn-flat pull-right">View All Orders</a>
-            </div>
-            <!-- /.box-footer -->
           </div>
+          
+          <!-- /.box -->
+
+          <!-- DONUT CHART -->
+          <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">CPU-IDLE</h3>
+              <ul class="list-inline text-right">
+			  <li><h5><i class="fa fa-circle m-r-5 text-inverse" style="color:#f56954;"></i>MemoryUsed</h5></li>
+			  <li><h5><i class="fa fa-circle m-r-5 text-info"style="color:#00a65a;"></i>MemoryUnutilized</h5></li>
+			  </ul>
+              <div class="box-tools pull-right">
+			    <a class="mr-3" href="#"><i class="fa fa-refresh"></i></a>  
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body chart-responsive">
+              <div class="chart" id="sales-chart" style="height: 200px; position: relative;"></div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+		  <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">CPU-IDLE</h3>
+              <!--<ul class="list-inline text-right">
+			  <li><h5><i class="fa fa-circle m-r-5 text-inverse" style="color:#FFFF00;"></i>iPhone</h5></li>
+			  <li><h5><i class="fa fa-circle m-r-5 text-info"></i>iPad</h5></li>
+			  <li><h5><i class="fa fa-circle m-r-5 text-success"></i>iPod</h5></li></ul>-->
+              <div class="box-tools pull-right">
+			    <a class="mr-3" href="#"><i class="fa fa-refresh"></i></a>   
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>				
+              </div>
+            </div>
+            <div class="box-body chart-responsive">
+              <div class="chart" id="revenue2-chart" style="height: 300px;"></div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+
+        </div>
+        <!-- /.col (LEFT) -->
+        <div class="col-lg-6">
+          <!-- LINE CHART -->
+		  <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">内存占用率（%）</h3>
+              <ul class="list-inline text-right">
+			  <li><h5><i class="fa fa-circle m-r-5 text-inverse" style="color:#f56954;"></i>实际值</h5></li>
+			  <li><h5><i class="fa fa-circle m-r-5 text-info"style="color:#008CBA;"></i>预测值</h5></li>
+			  </ul>
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body chart-responsive">
+              <div class="chart" id="line1-chart" style="height: 300px;"></div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+         
+          <!-- /.box -->
+
+          <!-- BAR CHART -->
+          <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">Apache服务状态</h3>
+              <ul class="list-inline text-right">
+			  <li><h5><i class="fa fa-circle m-r-5 text-inverse" style="color:#f56954;"></i>StateNormal</h5></li>
+			  <li><h5><i class="fa fa-circle m-r-5 text-info"style="color:#00a65a;"></i>StateException</h5></li>
+			  </ul>
+              <div class="box-tools pull-right">
+                <a class="mr-3" href="#"><i class="fa fa-refresh"></i></a>  
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body chart-responsive">
+              <div class="chart" id="sales1-chart" style="height: 200px;position: relative;"></div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+          <div class="box box-danger">
+            <div class="box-header with-border">
+              <h3 class="box-title">磁盘占用率</h3>
+              <ul class="list-inline text-right">
+			  <li><h5><i class="fa fa-circle m-r-5 text-inverse" style="color:#f56954;"></i>StateNormal</h5></li>
+			  <li><h5><i class="fa fa-circle m-r-5 text-info"style="color:#00a65a;"></i>StateException</h5></li>
+			  </ul>
+              <div class="box-tools pull-right">
+                <a class="mr-3" href="#"><i class="fa fa-refresh"></i></a>  
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+              </div>
+            </div>
+            <div class="box-body chart-responsive">
+              <div class="chart" id="sales2-chart" style="height: 200px;position: relative;"></div>
+            </div>
+            <!-- /.box-body -->
+          </div>
+        </div>
+        <!-- /.col (RIGHT) -->
+      </div>
+      <!-- /.row -->
+
+    </section>
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-
+ 
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Create the tabs -->
     <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
       <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
-      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
     </ul>
     <!-- Tab panes -->
     <div class="tab-content">
@@ -720,48 +808,293 @@
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
-<script src="static/bower_components/jquery/dist/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="static/bower_components/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="static/bower_components/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- Morris.js charts -->
-<script src="static/bower_components/raphael/2.2.7/raphael.min.js"></script>
-<script src="static/bower_components/morris.js/0.5.0/morris.min.js"></script>
-<!-- Sparkline -->
-<script src="static/bower_components/jquery-sparklines/2.1.2/jquery.sparkline.min.js"></script>
-<!-- jvectormap -->
-<script src="static/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="static/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="static/bower_components/jQuery-Knob/1.2.11/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="static/bower_components/moment.js/2.18.1/moment.min.js"></script>
-<script src="static/bower_components/bootstrap-daterangepicker/2.1.25/daterangepicker.min.js"></script>
-<!-- datepicker -->
-<script src="static/bower_components/bootstrap-datepicker/1.7.0/js/bootstrap-datepicker.min.js"></script>
-<!-- Bootstrap WYSIHTML5 -->
-<script src="static/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
-<!-- Slimscroll -->
-<script src="static/bower_components/jQuery-slimScroll/1.0.0/jquery.slimscroll.min.js"></script>
+<script src="https://cdn.bootcss.com/raphael/2.2.7/raphael.min.js"></script>
+<script src="https://cdn.bootcss.com/morris.js/0.5.0/morris.min.js"></script>
 <!-- FastClick -->
-<script src="static/bower_components/fastclick/1.0.6/fastclick.min.js"></script>
+<script src="https://cdn.bootcss.com/fastclick/1.0.6/fastclick.js"></script>
 <!-- AdminLTE App -->
 <script src="static/dist/js/adminlte.min.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="static/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="static/dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    "use strict";
+    
+	//cpu利用率
+	var line = new Morris.Line({
+      element: 'line-chart',
+      resize: true,
+      data: [
+        {y: '2020-1-1 08:00', 实际利用率: 6,预测利用率:7},
+		{y: '2020-1-1 08:01', 实际利用率: 17,预测利用率:16.5},
+		{y: '2020-1-1 08:02', 实际利用率: 14,预测利用率:14.5},
+		{y: '2020-1-1 08:03', 实际利用率: 10,预测利用率:10},
+		{y: '2020-1-1 08:04', 实际利用率: 14,预测利用率:15},
+		{y: '2020-1-1 08:05', 实际利用率: 17,预测利用率:16.5},
+		{y: '2020-1-1 08:06', 实际利用率: 7,预测利用率:7},
+		{y: '2020-1-1 08:07', 实际利用率: 13,预测利用率:12.8},
+		{y: '2020-1-1 08:08', 实际利用率: 15,预测利用率:14.3},
+		{y: '2020-1-1 08:09', 实际利用率: 13,预测利用率:13},
+		{y: '2020-1-1 08:10', 实际利用率: 9,预测利用率:9.1},
+		{y: '2020-1-1 08:11', 实际利用率: 15,预测利用率:15},
+		{y: '2020-1-1 08:12', 实际利用率: 16,预测利用率:16.1},
+		{y: '2020-1-1 08:13', 实际利用率: 9,预测利用率:9},
+		{y: '2020-1-1 08:14', 实际利用率: 11,预测利用率:10.5},
+		{y: '2020-1-1 08:15', 实际利用率: 17,预测利用率:17},
+		{y: '2020-1-1 08:16', 实际利用率: 15,预测利用率:15},
+		{y: '2020-1-1 08:17', 实际利用率: 7,预测利用率:7},
+		{y: '2020-1-1 08:18', 实际利用率: 15,预测利用率:14.9},
+		{y: '2020-1-1 08:19', 实际利用率: 14,预测利用率:13.8},
+		{y: '2020-1-1 08:20', 实际利用率: 13,预测利用率:13},
+		{y: '2020-1-1 08:21', 实际利用率: 9,预测利用率:9.1},
+		{y: '2020-1-1 08:22', 实际利用率: 15,预测利用率:14.8},
+		{y: '2020-1-1 08:23', 实际利用率: 14,预测利用率:13.9},
+		{y: '2020-1-1 08:24', 实际利用率: 6,预测利用率:7},
+		{y: '2020-1-1 08:25', 实际利用率: 16,预测利用率:16},
+		{y: '2020-1-1 08:26', 实际利用率: 15,预测利用率:14.7},
+		{y: '2020-1-1 08:27', 实际利用率: 12,预测利用率:13},
+		{y: '2020-1-1 08:27', 实际利用率: 9,预测利用率:9.2},
+		{y: '2020-1-1 08:29', 实际利用率: 17,预测利用率:17.5},
+		{y: '2020-1-1 08:30', 实际利用率: 7,预测利用率:7},
+		{y: '2020-1-1 08:31', 实际利用率: 14,预测利用率:14.2},
+		{y: '2020-1-1 08:32', 实际利用率: 15,预测利用率:15},
+		{y: '2020-1-1 08:33', 实际利用率: 12,预测利用率:11.7},
+		{y: '2020-1-1 08:34', 实际利用率: 14,预测利用率:14.1},
+		{y: '2020-1-1 08:35', 实际利用率: 28,预测利用率:27},
+      ],
+      xkey: 'y',
+      ykeys: ['实际利用率','预测利用率'],
+      labels: ['实际利用率','预测利用率'],
+      lineColors: ["#008CBA","#f56954" ],
+      hideHover: 'auto'
+    });
+	
+	var line = new Morris.Line({
+      element: 'line1-chart',
+      resize: true,
+      data: [
+        {y: '2020-1-1 08:00', 实际利用率: 74,预测利用率:74.9},
+		{y: '2020-1-1 08:01', 实际利用率: 74,预测利用率:74.8},
+		{y: '2020-1-1 08:02', 实际利用率: 74,预测利用率:74.6},
+		{y: '2020-1-1 08:03', 实际利用率: 74,预测利用率:74},
+		{y: '2020-1-1 08:04', 实际利用率: 77,预测利用率:75.8},
+		{y: '2020-1-1 08:05', 实际利用率: 77,预测利用率:76.4},
+		{y: '2020-1-1 08:06', 实际利用率: 77,预测利用率:77},
+		{y: '2020-1-1 08:07', 实际利用率: 73,预测利用率:73.9},
+		{y: '2020-1-1 08:08', 实际利用率: 73,预测利用率:73.2},
+		{y: '2020-1-1 08:09', 实际利用率: 74,预测利用率:73.9},
+		{y: '2020-1-1 08:10', 实际利用率: 74,预测利用率:74},
+		{y: '2020-1-1 08:11', 实际利用率: 77,预测利用率:75.9},
+		{y: '2020-1-1 08:12', 实际利用率: 77,预测利用率:76.8},
+		{y: '2020-1-1 08:13', 实际利用率: 73,预测利用率:75},
+		{y: '2020-1-1 08:14', 实际利用率: 77,预测利用率:76},
+		{y: '2020-1-1 08:15', 实际利用率: 77,预测利用率:76.9},
+		{y: '2020-1-1 08:16', 实际利用率: 77,预测利用率:77},
+		{y: '2020-1-1 08:17', 实际利用率: 70,预测利用率:73},
+		{y: '2020-1-1 08:18', 实际利用率: 70,预测利用率:72.1},
+		{y: '2020-1-1 08:19', 实际利用率: 77,预测利用率:78},
+		{y: '2020-1-1 08:20', 实际利用率: 77,预测利用率:77},
+		{y: '2020-1-1 08:21', 实际利用率: 77,预测利用率:77},
+		{y: '2020-1-1 08:22', 实际利用率: 77,预测利用率:77},
+		{y: '2020-1-1 08:23', 实际利用率: 77,预测利用率:76.9},
+		{y: '2020-1-1 08:24', 实际利用率: 70,预测利用率:72},
+		{y: '2020-1-1 08:25', 实际利用率: 70,预测利用率:70},
+		{y: '2020-1-1 08:26', 实际利用率: 70,预测利用率:70.5},
+		{y: '2020-1-1 08:27', 实际利用率: 73,预测利用率:72},
+		{y: '2020-1-1 08:27', 实际利用率: 73,预测利用率:72.5},
+		{y: '2020-1-1 08:29', 实际利用率: 73,预测利用率:72.9},
+		{y: '2020-1-1 08:30', 实际利用率: 73,预测利用率:73},
+		{y: '2020-1-1 08:31', 实际利用率: 73,预测利用率:73},
+		{y: '2020-1-1 08:32', 实际利用率: 74,预测利用率:73},
+		{y: '2020-1-1 08:33', 实际利用率: 74,预测利用率:73.9},
+		{y: '2020-1-1 08:34', 实际利用率: 77,预测利用率:77},
+		{y: '2020-1-1 08:35', 实际利用率: 77,预测利用率:76.5},
+      ],
+      xkey: 'y',
+      ykeys: ['实际利用率','预测利用率'],
+      labels: ['实际利用率','预测利用率'],
+      lineColors: ["#008CBA","#f56954" ],
+      hideHover: 'auto'
+    });
+    // AREA CHART
+    
+    // LINE CHART
+    var area = new Morris.Area({
+      element: 'revenue1-chart',
+      resize: true,
+      data: [
+	  
+        
+        {y: '2020-1-1 08:35:00', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:01', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:02', 磁盘写入速度: 28.6},
+		{y: '2020-1-1 08:35:03', 磁盘写入速度: 16.3},
+		{y: '2020-1-1 08:35:04', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:05', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:06', 磁盘写入速度: 40.9},
+		{y: '2020-1-1 08:35:07', 磁盘写入速度: 16.4},
+		{y: '2020-1-1 08:35:08', 磁盘写入速度: 73.6},
+		{y: '2020-1-1 08:35:09', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:10', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:11', 磁盘写入速度: 89.9},
+		{y: '2020-1-1 08:35:12', 磁盘写入速度: 69.5},
+		{y: '2020-1-1 08:35:13', 磁盘写入速度: 8.2},
+		{y: '2020-1-1 08:35:14', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:15', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:16', 磁盘写入速度: 12.3},
+		{y: '2020-1-1 08:35:17', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:18', 磁盘写入速度: 16.3},
+		{y: '2020-1-1 08:35:19', 磁盘写入速度: 8.2},
+		{y: '2020-1-1 08:35:20', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:21', 磁盘写入速度: 61.4},
+		{y: '2020-1-1 08:35:22', 磁盘写入速度: 53.2},
+		{y: '2020-1-1 08:35:23', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:24', 磁盘写入速度: 8.2},
+		{y: '2020-1-1 08:35:25', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:26', 磁盘写入速度: 24.1},
+		{y: '2020-1-1 08:35:27', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:28', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:29', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:30', 磁盘写入速度: 20.5},
+		{y: '2020-1-1 08:35:31', 磁盘写入速度: 81.8},
+		{y: '2020-1-1 08:35:32', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:33', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:34', 磁盘写入速度: 69.5},
+		{y: '2020-1-1 08:35:35', 磁盘写入速度: 4.1},
+        //{y: '2011 Q3', item1: 4912, item2: 1969,item3: 2000},
+        
+      ],
+      xkey: 'y',
+      ykeys: ['磁盘写入速度'],
+      labels: ['磁盘写入速度'],
+      lineColors: ["#f56954", "#00a65a" ],
+      hideHover: 'auto'
+    });
+	
+	var area = new Morris.Area({
+      element: 'revenue2-chart',
+      resize: true,
+      data: [
+	  {y: '2020-1-1 08:35:00', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:01', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:02', 磁盘写入速度: 28.6},
+		{y: '2020-1-1 08:35:03', 磁盘写入速度: 16.3},
+		{y: '2020-1-1 08:35:04', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:05', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:06', 磁盘写入速度: 40.9},
+		{y: '2020-1-1 08:35:07', 磁盘写入速度: 16.4},
+		{y: '2020-1-1 08:35:08', 磁盘写入速度: 73.6},
+		{y: '2020-1-1 08:35:09', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:10', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:11', 磁盘写入速度: 89.9},
+		{y: '2020-1-1 08:35:12', 磁盘写入速度: 69.5},
+		{y: '2020-1-1 08:35:13', 磁盘写入速度: 8.2},
+		{y: '2020-1-1 08:35:14', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:15', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:16', 磁盘写入速度: 12.3},
+		{y: '2020-1-1 08:35:17', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:18', 磁盘写入速度: 16.3},
+		{y: '2020-1-1 08:35:19', 磁盘写入速度: 8.2},
+		{y: '2020-1-1 08:35:20', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:21', 磁盘写入速度: 61.4},
+		{y: '2020-1-1 08:35:22', 磁盘写入速度: 53.2},
+		{y: '2020-1-1 08:35:23', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:24', 磁盘写入速度: 8.2},
+		{y: '2020-1-1 08:35:25', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:26', 磁盘写入速度: 24.1},
+		{y: '2020-1-1 08:35:27', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:28', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:29', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:30', 磁盘写入速度: 20.5},
+		{y: '2020-1-1 08:35:31', 磁盘写入速度: 81.8},
+		{y: '2020-1-1 08:35:32', 磁盘写入速度: 4.1},
+		{y: '2020-1-1 08:35:33', 磁盘写入速度: 0},
+		{y: '2020-1-1 08:35:34', 磁盘写入速度: 69.5},
+		{y: '2020-1-1 08:35:35', 磁盘写入速度: 4.1},
+        
+        //{y: '2020-1-1 08:00', CPU-IDLE: 83.23},
+		//{y: '2020-1-1 08:01', CPU-IDLE: 84.23},
+		//{y: '2020-1-1 08:02', CPU-IDLE: 93.28},
+		//{y: '2020-1-1 08:03', CPU-IDLE: 97.75},
+		//{y: '2020-1-1 08:04', CPU-IDLE: 93.10},
+		//{y: '2020-1-1 08:05', CPU-IDLE: 89.02},
+		//{y: '2020-1-1 08:06', CPU-IDLE: 88.91},
+		//{y: '2020-1-1 08:07', CPU-IDLE: 95.27},
+		//{y: '2020-1-1 08:08', CPU-IDLE: 91.00},
+		//{y: '2020-1-1 08:09', CPU-IDLE: 93.98},
+		//{y: '2020-1-1 08:10', CPU-IDLE: 95.01},
+		//{y: '2020-1-1 08:11', CPU-IDLE: 84.40},
+		//{y: '2020-1-1 08:12', CPU-IDLE: 85.98},
+		//{y: '2020-1-1 08:13', CPU-IDLE: 92.36},
+		//{y: '2020-1-1 08:14', CPU-IDLE: 95.31},
+		//{y: '2020-1-1 08:15', CPU-IDLE: 78.96},
+		//{y: '2020-1-1 08:16', CPU-IDLE: 82.72},
+		//{y: '2020-1-1 08:17', CPU-IDLE: 93.09},
+		//{y: '2020-1-1 08:18', CPU-IDLE: 91.09},
+		//{y: '2020-1-1 08:19', CPU-IDLE: 88.38},
+		//{y: '2020-1-1 08:20', CPU-IDLE: 84.96},
+		//{y: '2020-1-1 08:21', CPU-IDLE: 87.30},
+		//{y: '2020-1-1 08:22', CPU-IDLE: 89.98},
+		//{y: '2020-1-1 08:23', CPU-IDLE: 79.91},
+		//{y: '2020-1-1 08:24', CPU-IDLE: 89.34},
+		//{y: '2020-1-1 08:25', CPU-IDLE: 92.34},
+		//{y: '2020-1-1 08:26', CPU-IDLE: 84.61},
+		//{y: '2020-1-1 08:27', CPU-IDLE: 75.98},
+		//{y: '2020-1-1 08:27', CPU-IDLE: 84.78},
+		//{y: '2020-1-1 08:29', CPU-IDLE: 78.47},
+		//{y: '2020-1-1 08:30', CPU-IDLE: 98.74},
+		//{y: '2020-1-1 08:31', CPU-IDLE: 75.90},
+		//{y: '2020-1-1 08:32', CPU-IDLE: 98.67},
+		//{y: '2020-1-1 08:33', CPU-IDLE: 89.45},
+		//{y: '2020-1-1 08:34', CPU-IDLE: 78.91},
+		//{y: '2020-1-1 08:35', CPU-IDLE: 89.54},
+        //{y: '2011 Q3', item1: 4912, item2: 1969,item3: 2000},
+        
+      ],
+      xkey: 'y',
+      ykeys: ['c-IDLE'],
+      labels: ['CPU-IDLE'],
+      lineColors: ['#a0d0e0'],
+      hideHover: 'auto'
+    });
 
-<script type="text/javascript" src="{{ url_for('static', filename='js/filetree.js') }}"></script>
-<script type="text/javascript">
-function addUser(){    
-var name=prompt("输入的内容","");    if (name!=null && name!="") {        alert("你输入的是" + name);            }}</script>
-
+    //DONUT CHART
+    var donut = new Morris.Donut({
+      element: 'sales-chart',
+      resize: true,
+      colors: ["#f56954", "#00a65a" ],
+      data: [
+        {label: "Memory Used", value: 70},
+        {label: "Memory Unutilized", value: 30}
+      ],
+      hideHover: 'auto'
+    });
+    //BAR CHART
+    var donut = new Morris.Donut({
+      element: 'sales1-chart',
+      resize: true,
+      colors: [ "#00a65a"],
+      data: [
+        {label: "State Normal", value: 100}
+      ],
+      hideHover: 'auto'
+    });
+	var donut = new Morris.Donut({
+      element: 'sales2-chart',
+      resize: true,
+      colors: ["#f56954", "#00a65a" ],
+      data: [
+        {label: "Disk Used", value: 5},
+        {label: "Dsik Unutilized", value: 95}
+      ],
+      hideHover: 'auto'
+    });
+  });
+</script>
 </body>
 </html>
-
