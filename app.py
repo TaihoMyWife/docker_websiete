@@ -1,6 +1,5 @@
 #!/usr/bin/python
 # coding=utf-8
-
 import re
 import datetime
 import simplejson
@@ -9,6 +8,7 @@ import os
 import sys
 import pymysql
 import filedata
+import view.py
 import sys
 from shutil import copyfile #copy
 #from PIL import Image
@@ -33,12 +33,7 @@ from diskrunning import valuesdisk1
 from disksleeping import valuesdisk2
 from diskstopped import valuesdisk3
 '''
-
-
-
 import  paramiko
-
-
 app = Flask(__name__)
 app.config.from_object('config')
 global root
@@ -53,13 +48,25 @@ aimlocation = r'C:\Users\19371\Desktop\Dockerfile'
 commandsA= 'dir /a'
 commandsb= ''#docker 执行
 #Dockerfile 执行文件夹
+@app.route('/regist', methods=['POST','GET']) #这里不能post和get同时写
+def regist():
+    print('regist')
+    cursor = db.cursor()
+    #如果是刚登录的话是收不到节点页面传来的nodeid信息，所以直接跳到最初的页面
+    nameuser=request.args.get('username')
+    phone =request.args.get('phone')
+    password=request.args.get('password')
+    role = request.args.get('role')
+    imageid = request.args.get('imageid')
+    cursor.execute("insert into user1 values(nameuser,phone,password,role,imageid)")
+    return render_template('./login.html')
+
+
 @app.route('/jiedian', methods=['POST','GET']) #这里不能post和get同时写
 def jiedian():
     print('denglu')
     cursor = db.cursor()
-
     #如果是刚登录的话是收不到节点页面传来的nodeid信息，所以直接跳到最初的页面
-
     nameuser=request.args.get('username')
     print(nameuser)
 
@@ -151,18 +158,19 @@ def hello():
 
 @app.route('/osd-manage')
 def osd-manage():
+    gainDetails("fdisk -s")
     return render_template('./osd.html')
 
 @app.route('/fdisk-manage')
 def fdisk-manage():
-    return render_template('./fdisk.html')
+    return render_template('./fdisk.html',info=gainDetails("fdisk -s"))
 
 @app.route('/rdb-manage')
 def rdb-manage():
-    return render_template('./rdb.html')
-@app.route('/amp-manage')
+    return render_template('./rdb.html',info=gainDetails("rdb -s"))
+@app.route('/map-manage')
 def map-manage():
-    return render_template('./map.html')
+    return render_template('./map.html',info=gainDetails("fdisk -s"))
 
 @app.route('/sketch/monitor', methods=['POST', 'GET']) #show docker
 def monitor():
